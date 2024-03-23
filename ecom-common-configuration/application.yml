@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
+
+
+microservice:
+  payment-service:
+    endpoints:
+      fetchPaymentById:
+        uri: http://PAYMENT-SERVICE/payments/
+  user-service:
+    endpoints:
+      fetchUserById:
+        uri: http://USER-SERVICE/users/   
+        
+test:
+  input: 500000    
+
+   
+logging:
+  file:
+    name : /Users/javatechie/Desktop/logs/ecom-app.log
