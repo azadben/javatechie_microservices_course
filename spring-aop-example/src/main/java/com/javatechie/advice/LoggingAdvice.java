@@ -1,4 +1,5 @@
 package com.javatechie.advice;
+//1
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,6 +31,9 @@ public class LoggingAdvice {
         log.info("class name {} ,method name {} ", joinPoint.getTarget(), joinPoint.getSignature().getName());
         log.info("Request Body {} ", new ObjectMapper().writeValueAsString(joinPoint.getArgs()));
     }
+
+
+
 
 //    @AfterReturning(value = "execution (* com.javatechie.controller.ProductController.*(..))",returning = "object")
 //    public void logResponse(JoinPoint joinPoint,Object object) throws JsonProcessingException {
